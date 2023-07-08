@@ -1,0 +1,13 @@
+anchor_version = "0.13.2"
+
+[workspace]
+members = [
+    "token-lending/program",
+]
+
+[provider]
+cluster = "testnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.mainnet]
+spl_token_lending = "2ET8bgfULHsTnvNeXF7jnqGCWgykQRLjX6bcwuUD5RyD"

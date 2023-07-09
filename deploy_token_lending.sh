@@ -6,7 +6,7 @@ PROGRAM_ID=$2;
 OWNER=`grep 'keypair_path:' $SOLANA_CONFIG | awk '{print $2}'`;
 MARKET_OWNER=`solana --config $SOLANA_CONFIG address`;
 
-target/debug/spl-token --config $SOLANA_CONFIG unwrap;
+spl-token --config $SOLANA_CONFIG unwrap;
 
 set -e;
 echo "Using Solana config filepath: $SOLANA_CONFIG";
@@ -14,10 +14,10 @@ echo "Program ID: $PROGRAM_ID";
 echo "Owner: $OWNER";
 echo "Market Owner $MARKET_OWNER";
 
-solana config set --url https://api.devnet.solana.com;
+solana config set --url https://api.testnet.solana.com;
 
 solana airdrop 10 $MARKET_OWNER;
-SOURCE=`target/debug/spl-token --config $SOLANA_CONFIG wrap 10 2>&1 | head -n1 | awk '{print $NF}'`;
+SOURCE=`spl-token --config $SOLANA_CONFIG wrap 10 2>&1 | head -n1 | awk '{print $NF}'`;
 
 
 echo "Creating Lending Market";

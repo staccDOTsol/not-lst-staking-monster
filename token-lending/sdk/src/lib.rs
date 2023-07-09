@@ -13,12 +13,12 @@ pub use solana_program;
 
 /// mainnet program id
 pub mod solend_mainnet {
-    solana_program::declare_id!("2ET8bgfULHsTnvNeXF7jnqGCWgykQRLjX6bcwuUD5RyD");
+    solana_program::declare_id!("58HMHe7X1DnnjfHY5SuMi9ZwekPy2C1dSsnaYH3Ln2z8");
 }
 
 /// devnet program id
 pub mod solend_devnet {
-    solana_program::declare_id!("2ET8bgfULHsTnvNeXF7jnqGCWgykQRLjX6bcwuUD5RyD");
+    solana_program::declare_id!("58HMHe7X1DnnjfHY5SuMi9ZwekPy2C1dSsnaYH3Ln2z8");
 }
 
 /// Canonical null pubkey. Prints out as "nu11111111111111111111111111111111111111111"

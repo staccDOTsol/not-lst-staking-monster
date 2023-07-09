@@ -9,7 +9,7 @@ pub use solend_sdk::{error, instruction, math, oracles, state};
 // Export current sdk types for downstream users building with a different sdk version
 pub use solana_program;
 
-solana_program::declare_id!("2ET8bgfULHsTnvNeXF7jnqGCWgykQRLjX6bcwuUD5RyD");
+solana_program::declare_id!("58HMHe7X1DnnjfHY5SuMi9ZwekPy2C1dSsnaYH3Ln2z8");
 
 /// Canonical null pubkey. Prints out as "nu11111111111111111111111111111111111111111"
 pub const NULL_PUBKEY: solana_program::pubkey::Pubkey =

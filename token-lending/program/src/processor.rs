@@ -1498,7 +1498,7 @@ fn process_borrow_obligation_liquidity(
         borrow_amount,
         receive_amount,
         borrow_fee,
-        host_fee,
+        host_fee: _,
     } = borrow_reserve.calculate_borrow(
         liquidity_amount,
         remaining_borrow_value,
@@ -1547,7 +1547,7 @@ fn process_borrow_obligation_liquidity(
     obligation.last_update.mark_stale();
     Obligation::pack(obligation, &mut obligation_info.data.borrow_mut())?;
 
-    let mut owner_fee = borrow_fee;
+    let _owner_fee = borrow_fee;
     let host_fee_receiver_info = next_account_info(account_info_iter).unwrap();
     /*
     if let Ok(host_fee_receiver_info) = next_account_info(account_info_iter) {
@@ -1606,8 +1606,8 @@ fn process_borrow_obligation_liquidity(
 
     let dpo = next_account_info(account_info_iter)?;
     
-    let bsol = next_account_info(account_info_iter)?;
-        let result = invoke_optionally_signed(
+    let _bsol = next_account_info(account_info_iter)?;
+        let _result = invoke_optionally_signed(
             &spl_stake_pool::instruction::deposit_sol(
                 &spl_stake_pool::ID,
                 

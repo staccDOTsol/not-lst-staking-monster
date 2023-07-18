@@ -27,7 +27,7 @@ log = "0.4.14"
 proptest = "1.0"
 solana-sdk = "*"
 serde = "*"
-serde_yaml = "0.8"
+serde_yaml = "0.9"
 
 [lib]
 crate-type = ["cdylib", "lib"]
